@@ -55,7 +55,7 @@ ROOT_URLCONF = 'ultimate_fantasy_guide.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["ultimate_fantasy_guide/templates/"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

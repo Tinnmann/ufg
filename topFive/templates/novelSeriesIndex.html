@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+<h1>1. The Lord Of The Rings</h1>
+<div class="row">
+{% for lotr in lotrs %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static lotr.image %}">
+            <div class="card-body">
+                <h5 class="card-title">{{ lotr.novelTitle }}</h5>
+                <p class="card-text">{{ lotr.novelSummary }}</p>
+                <a href="{% url 'novelSeriesDetail' lotr.pk %}"
+                   class="btn btn-primary">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<h1>2. Sword Of Truth</h1>
+<div class="row">
+{% for sot in sots %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static sot.image %}">
+            <div class="card-body">
+                <h5 class="card-title">{{ lotr.novelTitle }}</h5>
+                <p class="card-text">{{ lotr.novelSummary }}</p>
+                <a href="{% url 'novelSeriesDetail' sot.pk %}"
+                   class="btn btn-primary">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<h1>3. Harry Potter</h1>
+<div class="row">
+{% for hp in hps %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static hp.image %}">
+            <div class="card-body">
+                <h5 class="card-title">{{ hp.novelTitle }}</h5>
+                <p class="card-text">{{ hp.novelSummary }}</p>
+                <a href="{% url 'novelSeriesDetail' hp.pk %}"
+                   class="btn btn-primary">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<h1>4. The Dresden Files</h1>
+<div class="row">
+{% for tdf in tdfs %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static tdf.image %}">
+            <div class="card-body">
+                <h5 class="card-title">{{ tdf.novelTitle }}</h5>
+                <p class="card-text">{{ tdf.novelSummary }}</p>
+                <a href="{% url 'novelSeriesDetail' tdf.pk %}"
+                   class="btn btn-primary">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<h1>5. Otherland</h1>
+<div class="row">
+{% for otherland in otherlands %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static otherland.image %}">
+            <div class="card-body">
+                <h5 class="card-title">{{ otherland.novelTitle }}</h5>
+                <p class="card-text">{{ otherland.novelSummary }}</p>
+                <a href="{% url 'novelSeriesDetail' otherland.pk %}"
+                   class="btn btn-primary">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
