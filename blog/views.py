@@ -4,7 +4,7 @@ from blog.forms import CommentForm
 # Create your views here.
 
 def blog_index(request):
-    blog_posts = Post.objects.all().order_by('-created_on')
+    blog_posts = BlogPost.objects.all().order_by('-created_on')
     context = {
         "blog_posts": blog_posts,
     }
